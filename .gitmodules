@@ -1,14 +1,12 @@
-[submodule "newlib"]
-	path = newlib
+[submodule "out/newlib"]
+	path = out/newlib
 	url = https://github.com/anza-xyz/newlib.git
 	tag = solana-tools-v1.51
-
-[submodule "rust"]
-	path = rust
+[submodule "out/rust"]
+	path = out/rust
 	url = https://github.com/anza-xyz/rust.git
 	tag = solana-tools-v1.51
-
-[submodule "cargo"]
-	path = cargo
-	url = https://github.com/anza-xyz/cargo.git
+[submodule "out/cargo"]
+	path = out/cargo
+	url = https://github.com/anza-xyz/cargo.git	
 	tag = solana-tools-v1.51

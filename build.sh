@@ -61,10 +61,7 @@ esac
 cd "$(dirname "$0")"
 OUT_DIR="$(realpath ./)/${1:-out}"
 
-rm -rf "${OUT_DIR}"
-mkdir -p "${OUT_DIR}"
 pushd "${OUT_DIR}"
-
 
 pushd rust
 if [[ "${HOST_TRIPLE}" == "x86_64-pc-windows-msvc" ]] ; then
