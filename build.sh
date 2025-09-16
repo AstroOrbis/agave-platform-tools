@@ -65,11 +65,6 @@ rm -rf "${OUT_DIR}"
 mkdir -p "${OUT_DIR}"
 pushd "${OUT_DIR}"
 
-git clone --single-branch --branch solana-tools-v1.51 --recurse-submodules --shallow-submodules https://github.com/anza-xyz/rust.git
-echo "$( cd rust && git rev-parse HEAD )  https://github.com/anza-xyz/rust.git" >> version.md
-
-git clone --single-branch --branch solana-tools-v1.51 https://github.com/anza-xyz/cargo.git
-echo "$( cd cargo && git rev-parse HEAD )  https://github.com/anza-xyz/cargo.git" >> version.md
 
 pushd rust
 if [[ "${HOST_TRIPLE}" == "x86_64-pc-windows-msvc" ]] ; then
@@ -90,9 +85,6 @@ fi
 popd
 
 if [[ "${HOST_TRIPLE}" != "x86_64-pc-windows-msvc" ]] ; then
-    git clone --single-branch --branch solana-tools-v1.51 https://github.com/anza-xyz/newlib.git
-    echo "$( cd newlib && git rev-parse HEAD )  https://github.com/anza-xyz/newlib.git" >> version.md
-
     build_newlib "v0"
     build_newlib "v1"
     build_newlib "v2"

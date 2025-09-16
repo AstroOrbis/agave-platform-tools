@@ -1,0 +1,11 @@
+[submodule "newlib"]
+	path = newlib
+	url = https://github.com/anza-xyz/newlib.git
+
+[submodule "rust"]
+	path = rust
+	url = https://github.com/anza-xyz/rust.git
+
+[submodule "cargo"]
+	path = cargo
+	url = https://github.com/anza-xyz/cargo.git
